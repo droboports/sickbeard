@@ -51,7 +51,7 @@ _is_running() {
 
 start() {
   rm -f "${pidfile}"
-  PATH="${prog_dir}/libexec:${DROBOAPPS_DIR}/git/bin:${PATH}" PYTHONPATH="${prog_dir}/lib/python2.7/site-packages" "${python}" "${prog_dir}/app/SickBeard.py" ${PORT} --datadir="${prog_dir}/data" --pidfile="${pidfile}" --nolaunch --daemon
+  PATH="${prog_dir}/libexec:${DROBOAPPS_DIR}/git/bin:${PATH}" PYTHONPATH="${prog_dir}/lib/python2.7/site-packages" "${python}" "${prog_dir}/app/SickBeard.py" --datadir="${prog_dir}/data" --pidfile="${pidfile}" --nolaunch --daemon
 }
 
 _service_start() {
