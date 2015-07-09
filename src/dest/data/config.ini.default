@@ -1,2 +1,5 @@
 [General]
 web_port = 8082
+log_dir = "/tmp/DroboApps/sickbeard"
+version_notify = 0
+git_path = "/mnt/DroboFS/Shares/DroboApps/git/bin/git"
