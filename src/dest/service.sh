@@ -28,6 +28,7 @@ if [ -z "${FRAMEWORK_VERSION:-}" ]; then
 fi
 
 start() {
+  HOME="${prog_dir}/data" \
   PATH="${prog_dir}/libexec:${DROBOAPPS_DIR}/git/bin:${PATH}" \
   PYTHONPATH="${prog_dir}/lib/python2.7/site-packages" \
   "${daemon}" "${prog_dir}/app/SickBeard.py" --datadir="${prog_dir}/data" --pidfile="${pidfile}" --nolaunch --daemon
