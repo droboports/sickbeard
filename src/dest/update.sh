@@ -16,3 +16,6 @@ set -o nounset  # exit on unset variable
 set -o xtrace   # enable script tracing
 
 /bin/sh "${prog_dir}/service.sh" stop
+
+# Remove old web ui
+rm -fR "${prog_dir}/www"
