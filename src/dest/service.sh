@@ -7,10 +7,10 @@
 
 framework_version="2.1"
 name="sickbeard"
-version="0.507.63"
-description="Internet PVR for TV shows"
+version="0.507.63-1"
+description="The ultimate PVR application that searches for and manages your TV shows"
 depends="python2"
-webui=":8082/"
+webui="WebUI"
 
 prog_dir="$(dirname "$(realpath "${0}")")"
 daemon="${DROBOAPPS_DIR}/python2/bin/python"
@@ -42,7 +42,6 @@ STDERR=">&4"
 echo "$(date +"%Y-%m-%d %H-%M-%S"):" "${0}" "${@}"
 set -o errexit  # exit on uncaught error code
 set -o nounset  # exit on unset variable
-set -o pipefail # propagate last error code on pipe
 set -o xtrace   # enable script tracing
 
 main "${@}"
